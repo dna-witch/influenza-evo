@@ -12,10 +12,9 @@ tbd
 
 ## Authors
 + Shakuntala Mitra
-+ Dr. Alexander Franks (research mentor)
 
 ## License
 This project is licensed under the GNU GPLv3 License - see the LICENSE.md file for details.
 
 ## Acknowledgments
-tbd
++ Dr. Alexander Franks (research mentor)
