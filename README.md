@@ -8,14 +8,15 @@ Understanding how viral populations evolve is crucial to understanding the epide
 + How do viral populations evolve differently between countries?
 
 ## About the Data
-+ Viruses used in initial analysis: 
+### Viruses used in initial analysis: 
     + Measles virus:
-    N = sample size where each sample is an RNA sequence = 90
-    P = 
+    N = sample size where each sample is an RNA sequence = 90;
+    P = approx. number of nucleotides per ssRNA sequence = 15,894;
+    
     + Zika virus
     + Influenza A/H3N2
 
-All viral genome data was taken from [nextstrain](http://www.nextstrain.org/ "nextstrain"), [NCBI Viral Genomes](https://www.ncbi.nlm.nih.gov/genome/viruses/), and [ViPR](https://www.viprbrc.org/brc/home.spg?decorator=vipr "Virus Pathogen Resource").
+All viral genome data was collected from [nextstrain](http://www.nextstrain.org/ "nextstrain"), [NCBI Viral Genomes](https://www.ncbi.nlm.nih.gov/genome/viruses/), and [ViPR](https://www.viprbrc.org/brc/home.spg?decorator=vipr "Virus Pathogen Resource").
 
 ## Running the Tests
 tbd
