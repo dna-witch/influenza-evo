@@ -9,12 +9,20 @@ Understanding how viral populations evolve is crucial to understanding the epide
 
 ## About the Data
 ### Viruses used in initial analysis: 
-    + Measles virus:
-    N = sample size where each sample is an RNA sequence = 90;
-    P = approx. number of nucleotides per ssRNA sequence = 15,894;
-    
-    + Zika virus
-    + Influenza A/H3N2
++ Measles virus:
+    + N = sample size where each sample is an RNA sequence = 90
+    + P = approx. number of nucleotides per ssRNA sequence = 15,894
+    + only complete genome sequences used
+
++ Zika virus
+    + N = sample size where each sample is an RNA sequence = 458
+    + P = approx. number of nucleotides per ssRNA sequence = 10,794
+    + only complete genome sequences used
+
++ Influenza A/H3N2
+    + N = sample size where each sample is an RNA sequence = 2079
+    + P = approx. number of nucleotides per ssRNA sequence = 13,500
+    + only complete genome sequences used
 
 All viral genome data was collected from [nextstrain](http://www.nextstrain.org/ "nextstrain"), [NCBI Viral Genomes](https://www.ncbi.nlm.nih.gov/genome/viruses/), and [ViPR](https://www.viprbrc.org/brc/home.spg?decorator=vipr "Virus Pathogen Resource").
 
