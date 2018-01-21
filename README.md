@@ -26,11 +26,9 @@ Understanding how viral populations evolve is crucial to understanding the epide
 
 All viral genome data was collected from [nextstrain](http://www.nextstrain.org/ "nextstrain"), [NCBI Viral Genomes](https://www.ncbi.nlm.nih.gov/genome/viruses/), and [ViPR](https://www.viprbrc.org/brc/home.spg?decorator=vipr "Virus Pathogen Resource").
 
-## Running the Tests
-tbd
-
 ## Built With
-+ Pomegranate
++ Pomegranate (Python Librar)
++ YAHMM (Python Library)
 
 ## Authors
 + Shakuntala Mitra
@@ -40,3 +38,4 @@ This project is licensed under the GNU GPLv3 License - see the LICENSE.md file f
 
 ## Acknowledgments
 + Dr. Alexander Franks (research mentor)
++ Jacob Schreiber
