@@ -4,6 +4,7 @@ Understanding how viral populations evolve is crucial to understanding the epide
 ## Main Questions
 + Can we identify the selective parameters that led a virus to evolve in a certain way?
     + Can we computationally predict the quantitative values for these parameters, thus elucidating their impact on viral evolution in a specific environment?
+        + Can we use this information to predict possible virus mutations given a set of environmental conditions, simulating viral evolution in a realistic way?
 + What are the differences in mutation rates between viruses?
 + How do viral populations evolve differently between countries?
 
@@ -27,8 +28,9 @@ Understanding how viral populations evolve is crucial to understanding the epide
 All viral genome data was collected from [nextstrain](http://www.nextstrain.org/ "nextstrain"), [NCBI Viral Genomes](https://www.ncbi.nlm.nih.gov/genome/viruses/), and [ViPR](https://www.viprbrc.org/brc/home.spg?decorator=vipr "Virus Pathogen Resource").
 
 ## Built With
-+ Pomegranate (Python Librar)
++ Pomegranate (Python Library)
 + YAHMM (Python Library)
++ HMMer (Python, for Linux)
 
 ## Authors
 + Shakuntala Mitra
