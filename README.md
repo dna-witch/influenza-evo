@@ -41,3 +41,4 @@ This project is licensed under the GNU GPLv3 License - see the LICENSE.md file f
 ## Acknowledgments
 + Dr. Alexander Franks (research mentor)
 + Jacob Schreiber
++ UCSB CNSI Knot
