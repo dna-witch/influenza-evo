@@ -30,7 +30,7 @@ All viral genome data was collected from [nextstrain](http://www.nextstrain.org/
 ## Built With
 + Pomegranate (Python Library)
 + YAHMM (Python Library)
-+ HMMer (Python, for Linux)
++ HMMER3 (Python, for Linux)
 
 ## Authors
 + Shakuntala Mitra
@@ -41,4 +41,4 @@ This project is licensed under the GNU GPLv3 License - see the LICENSE.md file f
 ## Acknowledgments
 + Dr. Alexander Franks (research mentor)
 + Jacob Schreiber
-+ UCSB CNSI Knot
++ UCSB CNSI Knot Computing Services
