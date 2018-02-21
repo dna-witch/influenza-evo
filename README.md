@@ -7,6 +7,7 @@ Understanding how viral populations evolve is crucial to understanding the epide
         + Can we use this information to predict possible virus mutations given a set of environmental conditions, simulating viral evolution in a realistic way?
 + What are the differences in mutation rates between viruses?
 + How do viral populations evolve differently between countries?
++ Can we generate potential future mutated virus genomes, simulating viral population evolution in a realistic manner (taking environmental factors into account)?
 
 ## About the Data
 ### Viruses used in initial analysis: 
