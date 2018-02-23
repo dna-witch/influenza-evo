@@ -2,12 +2,9 @@
 Understanding how and why viruses evolve is crucial to understanding the epidemiology of viral diseases and designing successful antivirals. RNA viruses mutate at high frequencies over short replication periods, quickly acquiring antiviral drug resistance. This project focuses on quantifying and computationally predicting the parameters that drive selection in inter-host viral evolution using machine learning techniques. Viral population genome data from various timepoints will be used to create a database of profile Hidden Markov Models. The goal is to realistically model viral population evolution across different geographic regions, gaining insights into virulence, pathogenicity, and environmental stability of newly mutated viral strains.
 
 ## Main Questions
-+ Can we identify the selective parameters that led a virus to evolve in a certain way?
-    + Can we computationally predict the quantitative values for these parameters, thus elucidating their impact on viral evolution in a specific environment?
-        + Can we use this information to predict possible virus mutations given a set of environmental conditions, simulating viral evolution in a realistic way?
-+ What are the differences in mutation rates between viruses?
-+ How do viral populations evolve differently between countries?
-+ Can we generate potential future mutated virus genomes, simulating viral population evolution in a realistic manner (taking environmental factors into account)?
++ Can we identify and predict the selective parameters that led a virus to evolve in a certain way? For example, how and why do viral populations evolve distinctly in different countries?
+    + Can we use this information to predict possible virus mutations given a set of environmental conditions, simulating viral evolution in a realistic way?
++ How does the impact of these factors differ between species of viruses?
 
 ## About the Data
 ### Viruses used in initial analysis: 
