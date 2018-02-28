@@ -1,0 +1,37 @@
+## Why am I using profile-HMMs?
+Good question! (will answer in detail later)
+
+All profile-HMM data sources, descriptions, files, and databases will be listed below:
+
+## For HPIV Type 4 Viruses
++ hpiv4Asia.hmm
+  + Data type: Genome
+  + used sequences downloaded from ViPR database
+  + built using HMMER3
+  + number of sequences used in build: 77
+  + HPIV Type 4 strains from Asia; not all complete genomes; mixed host species; collection dates not specified
+  + notes: 
+
++ hpiv4NorthAmerica.hmm
+  + Data type: Genome
+  + used sequences downloaded from ViPR database
+  + built using HMMER3
+  + number of sequences used in build: 45
+  + HPIV Type 4 strains from North America; not all complete genomes; mixed host species; collection dates not specified
+  + notes: 
+  
++ hpiv4SouthAmerica.hmm
+  + Data type: Genome
+  + used sequences downloaded from ViPR database
+  + built using HMMER3
+  + number of sequences used in build: 3
+  + HPIV Type 4 strains from South America; not all complete genomes; mixed host species; collection dates not specified
+  + notes: Sample size is very small! Could skew the results.
+  
++ hpiv4Oceania.hmm
+  + Data type: Genome
+  + used sequences downloaded from ViPR database
+  + built using HMMER3
+  + number of sequences used in build: 13
+  + HPIV Type 4 strains from Oceania; not all complete genomes; mixed host species; collection dates not specified
+  + notes: Sample size is very small! Could skew the results.
