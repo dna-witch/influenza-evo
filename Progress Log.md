@@ -15,5 +15,6 @@ Next steps:
   + This is again to gain insights on which proteins evolve/change most in certain regions over others! By playing with the settings/parameters (in the genetic algorithms), we can see how different factors tend to drive selection in viral populations over time.
   + Selective pressures that are modeled in genetic algorithms must correspond to actual metadata (figure out how to make this work, lol). Want to make the model as realistic as possible!
 + learn how to implement genetic algorithms
++ gather and organize relevant virus + environmental metadata
 
 ## 2/28/2018
