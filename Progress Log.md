@@ -18,3 +18,16 @@ Next steps:
 + gather and organize relevant virus + environmental metadata
 
 ## 2/28/2018
+Accomplished:
++ Found out how to solve the issue of small sample sizes for the genome data!
+  + Can use the RethinkDB server, which stores all the viral sequences and is optimized for Influenza and Zika viruses from the fauna (part of Nextstrain) database
++ Asked for CNSI Knot support staff to help install RethinkDB and Python client driver
+
+Next steps:
++ After RethinkDB and fauna are working, create new profile-HMM database with larger sample sizes
+  + can sort by country as well as by continent
++ Spit out random, unaligned sample sequences from the HMM database and align them to the different profile-HMMs (see reasoning in 2/27/18 log)
++ Gather and incorporate metadata
+  + test the impact of different environmental factors by implementing genetic algorithms, which mimic natural selection
+  
+## 3/1/2018
