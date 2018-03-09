@@ -1,0 +1,23 @@
+# now you have a ton of protein profile-HMMs and want to concatenate them into one HMM flat file
+
+for f in $(ls *.hmm)
+do
+echo "Processing file: ${f}"
+cat ${f} > InsertNameHere-ProtFam
+done
+
+# check
+
+ls
+head InsertNameHere-ProtFam
+tail InsertNameHere-ProtFam
+
+# now you have the flat file! need to use hmmpress to make it searchable/scannable
+
+hmmpress InsertNameHere-ProtFam
+
+# check! should see four new files in the folder (besides InsertNameHere-ProtFam)
+
+ls
+
+# done! protein family profile-HMM database is ready to use!
