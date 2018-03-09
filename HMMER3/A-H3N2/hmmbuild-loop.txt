@@ -1,0 +1,9 @@
+# create a UNIX loop to create one profile-HMM per protein sequence alignment (CDS region, nucleotide) using hmmbuild
+
+for f in $(ls *.fasta)
+do
+echo "Processing file: ${f}"
+hmmbuild ${f}_profile.hmm ${f}
+done
+
+# now, you've created a profile-HMM for each sequence alignment in your given folder or directory
