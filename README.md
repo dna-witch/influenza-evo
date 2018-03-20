@@ -9,19 +9,19 @@ Understanding how and why viruses evolve is crucial to understanding the epidemi
 ## About the Data
 ### Viruses used in initial analysis: 
 + Influenza A/H3N2
-    + N = sample size where each sample is an RNA sequence = 2079
-    + P = approx. number of nucleotides per ssRNA sequence = 13,500
-    + only complete genome sequences used
+    + N = sample size where each sample is an CDS nucleotide sequence = 849,899
+    + P = approx. number of nucleotides per complete virus ssRNA sequence = 13,500
+    + only CDS regions were analyzed (since CDS regions typically have a low mutation rate unless faced with selective pressures)
 ### Viruses for further analysis:
 + Measles virus:
-    + N = sample size where each sample is an RNA sequence = 90
+    + N = sample size where each sample is a CDS nucleotide sequence = 90
     + P = approx. number of nucleotides per ssRNA sequence = 15,894
-    + only complete genome sequences used
+    + only CDS regions were analyzed
 
 + Zika virus
-    + N = sample size where each sample is an RNA sequence = 458
+    + N = sample size where each sample is a CDS nucleotide sequence = 458
     + P = approx. number of nucleotides per ssRNA sequence = 10,794
-    + only complete genome sequences used
+    + only CDS regions were analyzed
 
 All viral genome data was collected from [nextstrain](http://www.nextstrain.org/ "nextstrain"), [NCBI Viral Genomes](https://www.ncbi.nlm.nih.gov/genome/viruses/), [ViPR](https://www.viprbrc.org/brc/home.spg?decorator=vipr "Virus Pathogen Resource"), [IRD](https://www.fludb.org/brc/home.spg?decorator=influenza).
 
