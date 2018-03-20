@@ -8,6 +8,11 @@ Understanding how and why viruses evolve is crucial to understanding the epidemi
 
 ## About the Data
 ### Viruses used in initial analysis: 
++ Influenza A/H3N2
+    + N = sample size where each sample is an RNA sequence = 2079
+    + P = approx. number of nucleotides per ssRNA sequence = 13,500
+    + only complete genome sequences used
+### Viruses for further analysis:
 + Measles virus:
     + N = sample size where each sample is an RNA sequence = 90
     + P = approx. number of nucleotides per ssRNA sequence = 15,894
@@ -18,17 +23,15 @@ Understanding how and why viruses evolve is crucial to understanding the epidemi
     + P = approx. number of nucleotides per ssRNA sequence = 10,794
     + only complete genome sequences used
 
-+ Influenza A/H3N2
-    + N = sample size where each sample is an RNA sequence = 2079
-    + P = approx. number of nucleotides per ssRNA sequence = 13,500
-    + only complete genome sequences used
-
-All viral genome data was collected from [nextstrain](http://www.nextstrain.org/ "nextstrain"), [NCBI Viral Genomes](https://www.ncbi.nlm.nih.gov/genome/viruses/), and [ViPR](https://www.viprbrc.org/brc/home.spg?decorator=vipr "Virus Pathogen Resource").
+All viral genome data was collected from [nextstrain](http://www.nextstrain.org/ "nextstrain"), [NCBI Viral Genomes](https://www.ncbi.nlm.nih.gov/genome/viruses/), [ViPR](https://www.viprbrc.org/brc/home.spg?decorator=vipr "Virus Pathogen Resource"), [IRD](https://www.fludb.org/brc/home.spg?decorator=influenza).
 
 ## Built With
 + Pomegranate (Python Library)
-+ YAHMM (Python Library)
 + HMMER3 (Python, for Linux)
++ MUSCLE Multiple Sequence Alignment Algorithm
++ MAFFT Multiple Sequence Aligner
++ IRD Sequence Variation (SNP) Tool
++ DEAP (Distributed Evolutionary Algorithms in Python) (Python Library for GAs)
 
 ## Authors
 + Shakuntala Mitra
