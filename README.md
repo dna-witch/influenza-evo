@@ -44,3 +44,4 @@ This project is licensed under the GNU GPLv3 License - see the LICENSE.md file f
 + Dr. Alexander Franks (research mentor)
 + Jacob Schreiber
 + UCSB CNSI Knot Computing Services
++ UCSB PSTAT RAS Cluster Computing Services
