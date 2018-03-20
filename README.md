@@ -32,6 +32,7 @@ All viral genome data was collected from [nextstrain](http://www.nextstrain.org/
 + MAFFT Multiple Sequence Aligner
 + IRD Sequence Variation (SNP) Tool
 + DEAP (Distributed Evolutionary Algorithms in Python) (Python Library for GAs)
++ PHYLIP (phylogenetics tool for inferring evolutionary trees)
 
 ## Authors
 + Shakuntala Mitra
