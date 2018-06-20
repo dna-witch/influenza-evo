@@ -30,4 +30,22 @@ Next steps:
 + Gather and incorporate metadata
   + test the impact of different environmental factors by implementing genetic algorithms, which mimic natural selection
   
-## 3/1/2018
+## 6/19/2018
+Accomplished:
++ Finished building profile-HMMs for all continents
++ Presented my research progress at UCSB Undergraduate Research Slam
++ Started practicing with genetic algorithms
+
+Next steps:
++ Analyze current data for any obvious, emergent patterns for protein evolution specific to continents
++ Write starting genetic algorithm
+  + will branch off of this to optimize for each continent (first), then each major country (later)
+  + variables/factors to consider: gene reassortments, environmental stability, exposure to mutagens, immune system differences, interactions btw humans and animals, etc.
+  + goal is to understand antigenic drift + shift
+
+Future goals:
++ be able to predict and recreate the phylogenetic tree (showing virus strain divergence) as shown on nextstrain.org
+  + will use PHILIP
++ obtain predicted amino acid sequences from the simulated virus genomes and model molecular folding (secondary and tertiary structures)
+  + must do more research into this
++ use the Allosphere for more data visualization
