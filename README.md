@@ -26,7 +26,6 @@ Understanding how and why viruses evolve is crucial to understanding the epidemi
 All viral genome data was collected from [nextstrain](http://www.nextstrain.org/ "nextstrain"), [NCBI Viral Genomes](https://www.ncbi.nlm.nih.gov/genome/viruses/), [ViPR](https://www.viprbrc.org/brc/home.spg?decorator=vipr "Virus Pathogen Resource"), [IRD](https://www.fludb.org/brc/home.spg?decorator=influenza).
 
 ## Built With
-+ Pomegranate (Python Library)
 + HMMER3 (Python, for Linux)
 + MUSCLE Multiple Sequence Alignment Algorithm
 + MAFFT Multiple Sequence Aligner
