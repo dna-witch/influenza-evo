@@ -32,6 +32,7 @@ All viral genome data was collected from [nextstrain](http://www.nextstrain.org/
 + IRD Sequence Variation (SNP) Tool
 + DEAP (Distributed Evolutionary Algorithms in Python) (Python Library for GAs)
 + PHYLIP (phylogenetics tool for inferring evolutionary trees)
++ I-TASSER Suite (tools for protein structure modeling)
 
 ## Authors
 + Shakuntala Mitra
