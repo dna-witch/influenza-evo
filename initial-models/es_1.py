@@ -6,7 +6,8 @@
 import array
 import random
 
-from deap import base, creator, tools
+from deap import base, creator, tools, algorithms, benchmarks, cma
+from deap.benchmarks.tools import hypervolume
 
 creator.create("FitnessMulti", base.Fitness, weights=(-1.0, 1.0))
 # weights can be any real number; sign determines if min or max
@@ -40,7 +41,7 @@ def evaluate(individual):
     return sum(individual),
 
 toolbox.register("mate", tools.cxESTwoPoint) # play with cxESTwoPoint and cxESBlend
-toolbox.regis("mutate", tools.mutES, mu=0, sigma=1, indpb=0.1) # play with mutation scheme; double check for errors
+toolbox.register("mutate", tools.mutES, mu=0, sigma=1, indpb=0.1) # play with mutation scheme; double check for errors
 toolbox.register("select", tools.selTournament, tournsize=8) # play with tournsize
 toolbox.register("evaluate", evaluate)
 
@@ -48,25 +49,104 @@ toolbox.register("evaluate", evaluate)
 
 # main function
 def main():
-    pop = toolbox.population(n=100)
+    population = [creator.Individual(x) for x in (numpy.random.uniform(0, 1, (MU, N)))]
     CXPB, MUTPB, NGEN = 0.5, 0.2, 40 # crossover prob, mutation prob, and number of generations
 
-    # Evaluate the entire population
-    # write some shit here
+    for ind in population:
+        ind.fitness.values = toolbox.evaluate(ind)
 
+    strategy = cma.StrategyMultiObjective(population, sigma=1.0, mu=MU, lambda_=LAMBDA)
+    toolbox.register("generate", strategy.generate, creator.Individual)
+    toolbox.register("update", strategy.update)
+
+    stats = tools.Statistics(lambda ind: ind.fitness.values)
+    stats.register("min", numpy.min, axis=0)
+    stats.register("max", numpy.max, axis=0)
+
+    logbook = tools.Logbook()
+    logbook.header = ["gen", "nevals"] + (stats.fields if stats else [])
+
+    fitness_history = []
 
     for g in range(NGEN):
         # select next generation individuals (don't just select the best, make sure to take some randomly)
         # Clone the selected individuals (offspring)
+        population = toolbox.generate()
 
         # apply crossover and mutations on the offspring
 
 
         # evaluate the individuals w/ an invalid fitness
+        fitnesses = toolbox.map(toolbox.evaluate, population)
+        for ind, fit in zip(population, fitnesses):
+            ind.fitness.values = fit
+            fitness_history.append(fit)
 
         # the population is entirely replaced by the new offspring
-        pop[:] = offspring
+        toolbox.update(population)
 
-    return pop
+
+        record = stats.compile(population) if stats is not None else {}
+        logbook.record(gen=gen, nevals=len(population), **record)
+        if verbose:
+            print(logbook.stream)
+
+    if verbose:
+        print("Final population hypervolume is %f" % hypervolume(strategy.parents, [11.0, 11.0]))
+
+        # Note that we use a penalty to guide the search to feasible solutions,
+        # but there is no guarantee that individuals are valid.
+        # We expect the best individuals will be within bounds or very close.
+        num_valid = 0
+        for ind in strategy.parents:
+            dist = distance(closest_feasible(ind), ind)
+            if numpy.isclose(dist, 0.0, rtol=1.e-5, atol=1.e-5):
+                num_valid += 1
+        print("Number of valid individuals is %d/%d" % (num_valid, len(strategy.parents)))
+
+        print("Final population:")
+        print(numpy.asarray(strategy.parents))
+
+      if create_plot:
+        interactive = 0
+        if not interactive:
+            import matplotlib as mpl_tmp
+            mpl_tmp.use('Agg')   # Force matplotlib to not use any Xwindows backend.
+        import matplotlib.pyplot as plt
+
+        fig = plt.figure()
+        plt.title("Multi-objective minimization via MO-CMA-ES")
+        plt.xlabel("First objective (function) to minimize")
+        plt.ylabel("Second objective (function) to minimize")
+
+        # Limit the scale because our history values include the penalty.
+        plt.xlim((-0.1, 1.20))
+        plt.ylim((-0.1, 1.20))
+
+        # Plot all history. Note the values include the penalty.
+        fitness_history = numpy.asarray(fitness_history)
+        plt.scatter(fitness_history[:,0], fitness_history[:,1],
+            facecolors='none', edgecolors="lightblue")
+
+        valid_front = numpy.array([ind.fitness.values for ind in strategy.parents if close_valid(ind)])
+        invalid_front = numpy.array([ind.fitness.values for ind in strategy.parents if not close_valid(ind)])
+
+        if len(valid_front) > 0:
+            plt.scatter(valid_front[:,0], valid_front[:,1], c="g")
+        if len(invalid_front) > 0:
+            plt.scatter(invalid_front[:,0], invalid_front[:,1], c="r")
+
+        if interactive:
+            plt.show()
+        else:
+            print("Writing cma_mo.png")
+            plt.savefig("cma_mo.png")
+
+    return strategy.parents
+
+if __name__ == "__main__":
+    solutions = main()
+#    return population
+
 
 ##### check out other algorithms and their variations to build your own: https://deap.readthedocs.io/en/master/api/algo.html#module-deap.algorithms
